@@ -1,0 +1,8 @@
+{
+  "name": "OmniFeast",
+  "description": "Production-ready hyperlocal 10-minute grocery delivery platform inspired by Zepto with complete multi-role RBAC architecture, Founder Master Dashboard, live order lifecycle tracking, real-time inventory, dark store picker/packer workflows, rider dispatch, and customer shopping.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

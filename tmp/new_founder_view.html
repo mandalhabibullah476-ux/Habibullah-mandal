@@ -1,0 +1,1105 @@
+    <!-- ==============================================================
+         2. ROUTE: /founder/dashboard (FOUNDER MASTER DASHBOARD ONLY)
+         ============================================================== -->
+    <div id="view-founder" class="view-page">
+      <div class="omni-founder-root">
+        <!-- 1. LEFT SIDEBAR NAVIGATION (18 MENUS + FOUNDER BADGE) -->
+        <aside class="omni-founder-sidebar">
+          <!-- Brand Block -->
+          <div class="omni-brand-block">
+            <div class="omni-brand-cart-icon">🛒</div>
+            <div>
+              <div class="omni-brand-title">OmniFeast</div>
+              <div class="omni-brand-sub">Hyperlocal Grocery Platform</div>
+            </div>
+          </div>
+
+          <!-- Master Control Pill Button -->
+          <div class="omni-master-badge-btn" onclick="switchFounderSidebar('dashboard')">
+            <span>👑</span>
+            <span>Founder Master Control</span>
+          </div>
+
+          <!-- Navigation Menus -->
+          <nav class="omni-sidebar-nav">
+            <div class="omni-nav-item active" id="nav-founder-dashboard" onclick="switchFounderSidebar('dashboard', this)">
+              <div class="omni-nav-item-left">
+                <span>🏠</span>
+                <span>Founder Dashboard</span>
+              </div>
+            </div>
+
+            <div class="omni-nav-item" id="nav-master-actions" onclick="switchFounderSidebar('actions', this)">
+              <div class="omni-nav-item-left">
+                <span>⚙️</span>
+                <span>Master Action Center</span>
+              </div>
+            </div>
+
+            <div class="omni-nav-item" id="nav-live-tracking" onclick="switchFounderSidebar('tracking', this)">
+              <div class="omni-nav-item-left">
+                <span>📍</span>
+                <span>Live Tracking (All Users)</span>
+              </div>
+              <span class="omni-nav-pulse-dot"></span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-users" onclick="switchFounderSidebar('users', this)">
+              <div class="omni-nav-item-left">
+                <span>👥</span>
+                <span>Users & Roles</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-customers" onclick="switchFounderSidebar('customers', this)">
+              <div class="omni-nav-item-left">
+                <span>👤</span>
+                <span>Customers</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-riders" onclick="switchFounderSidebar('riders', this)">
+              <div class="omni-nav-item-left">
+                <span>🛵</span>
+                <span>Delivery Partners</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-stores" onclick="switchFounderSidebar('stores', this)">
+              <div class="omni-nav-item-left">
+                <span>🏬</span>
+                <span>Stores & Dark Stores</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-managers" onclick="switchFounderSidebar('managers', this)">
+              <div class="omni-nav-item-left">
+                <span>👔</span>
+                <span>Managers</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-staff" onclick="switchFounderSidebar('staff', this)">
+              <div class="omni-nav-item-left">
+                <span>📦</span>
+                <span>Staff</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-admins" onclick="switchFounderSidebar('admins', this)">
+              <div class="omni-nav-item-left">
+                <span>🛡️</span>
+                <span>Admins & Super Admins</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-orders" onclick="switchFounderSidebar('orders', this)">
+              <div class="omni-nav-item-left">
+                <span>🛒</span>
+                <span>Orders (Live)</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-inventory" onclick="switchFounderSidebar('inventory', this)">
+              <div class="omni-nav-item-left">
+                <span>📦</span>
+                <span>Products & Inventory</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-finance" onclick="switchFounderSidebar('finance', this)">
+              <div class="omni-nav-item-left">
+                <span>💳</span>
+                <span>Payments & Wallet</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-offers" onclick="switchFounderSidebar('offers', this)">
+              <div class="omni-nav-item-left">
+                <span>🏷️</span>
+                <span>Offers & Campaigns</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-support" onclick="switchFounderSidebar('support', this)">
+              <div class="omni-nav-item-left">
+                <span>🎫</span>
+                <span>Support & Tickets</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-reports" onclick="switchFounderSidebar('reports', this)">
+              <div class="omni-nav-item-left">
+                <span>📊</span>
+                <span>Reports & Analytics</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-security" onclick="switchFounderSidebar('security', this)">
+              <div class="omni-nav-item-left">
+                <span>🔒</span>
+                <span>Security & Audit Logs</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+
+            <div class="omni-nav-item" id="nav-settings" onclick="switchFounderSidebar('settings', this)">
+              <div class="omni-nav-item-left">
+                <span>⚙️</span>
+                <span>System Settings</span>
+              </div>
+              <span class="omni-nav-chevron">›</span>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- 2. FOUNDER MAIN VIEWPORT -->
+        <main class="omni-founder-main">
+          <!-- Top Header Bar -->
+          <header class="omni-founder-topbar">
+            <!-- Left Header -->
+            <div class="omni-topbar-left">
+              <div class="omni-founder-user-profile">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" alt="Habibullah Mandal" class="omni-founder-avatar-img">
+                <div>
+                  <div class="omni-founder-name">Habibullah Mandal</div>
+                  <div class="omni-founder-role-title"><span>👑</span> Founder / Owner</div>
+                </div>
+              </div>
+
+              <!-- Systems Nominal Badge -->
+              <div class="omni-nominal-badge">
+                <span class="omni-nominal-pulse"></span>
+                <span>ALL SYSTEMS NOMINAL</span>
+              </div>
+
+              <!-- Live Clock -->
+              <div class="omni-clock-box">
+                <span>🕒</span>
+                <span id="founder-live-clock">Sat, 01 Nov 2026 | 11:42 AM</span>
+              </div>
+            </div>
+
+            <!-- Right Header -->
+            <div class="omni-topbar-right">
+              <button class="omni-service-area-btn" onclick="openServiceAreaModal()">
+                <span>📍</span>
+                <span>Service Area: <strong id="founder-current-zone" style="color:#A5B4FC;">Guwahati (4 Zones)</strong></span>
+              </button>
+
+              <div class="omni-bell-btn" onclick="openNotificationsModal()" title="12 Live Operational Alerts">
+                <span>🔔</span>
+                <span class="omni-bell-badge">12</span>
+              </div>
+
+              <div class="omni-topbar-icon-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+                <span>⛶</span>
+              </div>
+
+              <div class="omni-topbar-icon-btn" onclick="openPersonaSwitcherModal()" title="Evaluate Other Role Portals & RBAC">
+                <span>👨🏻‍💼</span>
+              </div>
+
+              <div class="omni-topbar-icon-btn" onclick="executeLogout()" title="Secure Logout" style="color: #F87171;">
+                <span>🚪</span>
+              </div>
+            </div>
+          </header>
+
+          <!-- 3. SUBVIEW: DASHBOARD (EXACT SCREENSHOT LAYOUT) -->
+          <div id="founder-sub-dashboard" class="omni-founder-subview">
+            <!-- 7 Top KPI Cards Bar -->
+            <div class="omni-kpi-bar">
+              <!-- KPI 1: Total Users -->
+              <div class="omni-kpi-card">
+                <div class="omni-kpi-icon-box" style="background: rgba(139, 92, 246, 0.15); color: #A78BFA; border: 1px solid rgba(139, 92, 246, 0.3);">👑</div>
+                <div class="omni-kpi-meta">
+                  <div class="omni-kpi-title">Total Users</div>
+                  <div class="omni-kpi-val">12,846</div>
+                  <div class="omni-kpi-sub" style="color: #34D399;">▲ +4.8%</div>
+                </div>
+              </div>
+
+              <!-- KPI 2: Customers -->
+              <div class="omni-kpi-card">
+                <div class="omni-kpi-icon-box" style="background: rgba(6, 182, 212, 0.15); color: #22D3EE; border: 1px solid rgba(6, 182, 212, 0.3);">👥</div>
+                <div class="omni-kpi-meta">
+                  <div class="omni-kpi-title">Customers</div>
+                  <div class="omni-kpi-val">10,320</div>
+                  <div class="omni-kpi-sub" style="color: #34D399;">▲ +5.2%</div>
+                </div>
+              </div>
+
+              <!-- KPI 3: Delivery Partners -->
+              <div class="omni-kpi-card">
+                <div class="omni-kpi-icon-box" style="background: rgba(249, 115, 22, 0.15); color: #FB923C; border: 1px solid rgba(249, 115, 22, 0.3);">🛵</div>
+                <div class="omni-kpi-meta">
+                  <div class="omni-kpi-title">Delivery Partners</div>
+                  <div class="omni-kpi-val">1,240</div>
+                  <div class="omni-kpi-sub" style="color: #34D399;">▲ +3.1%</div>
+                </div>
+              </div>
+
+              <!-- KPI 4: Stores -->
+              <div class="omni-kpi-card">
+                <div class="omni-kpi-icon-box" style="background: rgba(236, 72, 153, 0.15); color: #F472B6; border: 1px solid rgba(236, 72, 153, 0.3);">🏬</div>
+                <div class="omni-kpi-meta">
+                  <div class="omni-kpi-title">Stores</div>
+                  <div class="omni-kpi-val">24</div>
+                  <div class="omni-kpi-sub" style="color: #34D399;">Active 22</div>
+                </div>
+              </div>
+
+              <!-- KPI 5: Admins & Staff -->
+              <div class="omni-kpi-card">
+                <div class="omni-kpi-icon-box" style="background: rgba(59, 130, 246, 0.15); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.3);">👥</div>
+                <div class="omni-kpi-meta">
+                  <div class="omni-kpi-title">Admins & Staff</div>
+                  <div class="omni-kpi-val">186</div>
+                  <div class="omni-kpi-sub" style="color: #34D399;">▲ +2.4%</div>
+                </div>
+              </div>
+
+              <!-- KPI 6: Live Online -->
+              <div class="omni-kpi-card">
+                <div class="omni-kpi-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3);">📶</div>
+                <div class="omni-kpi-meta">
+                  <div class="omni-kpi-title">Live Online</div>
+                  <div class="omni-kpi-val">1,973</div>
+                  <div class="omni-kpi-sub" style="color: #34D399;">● Real-Time</div>
+                </div>
+              </div>
+
+              <!-- KPI 7: Live Orders -->
+              <div class="omni-kpi-card">
+                <div class="omni-kpi-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #FBBF24; border: 1px solid rgba(245, 158, 11, 0.3);">📦</div>
+                <div class="omni-kpi-meta">
+                  <div class="omni-kpi-title">Live Orders</div>
+                  <div class="omni-kpi-val">312</div>
+                  <div class="omni-kpi-sub" style="color: #FCD34D;">In Progress</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Central Section: Live Location Tracking – All Users (Real-Time) -->
+            <div class="omni-map-section">
+              <!-- Header Bar -->
+              <div class="omni-map-header">
+                <div class="omni-map-header-title">
+                  <span class="omni-nominal-pulse"></span>
+                  <span>Live Location Tracking – All Users (Real-Time)</span>
+                </div>
+                <div class="omni-map-controls-group">
+                  <div class="omni-switch-wrap">
+                    <span>Auto Refresh (10s)</span>
+                    <label class="omni-switch">
+                      <input type="checkbox" id="founder-auto-refresh-toggle" checked onchange="toggleMapAutoRefresh(this)">
+                      <span class="omni-slider"></span>
+                    </label>
+                  </div>
+                  <div class="omni-topbar-icon-btn" onclick="toggleMapExpand()" title="Expand Map">⛶</div>
+                </div>
+              </div>
+
+              <!-- Role Filter Pills -->
+              <div class="omni-filter-pills-bar">
+                <button class="omni-filter-pill active" onclick="filterFounderMapRole('ALL', this)">All (1,973)</button>
+                <button class="omni-filter-pill" onclick="filterFounderMapRole('CUSTOMER', this)">Customer (1,245)</button>
+                <button class="omni-filter-pill" onclick="filterFounderMapRole('DELIVERY', this)">Delivery (412)</button>
+                <button class="omni-filter-pill" onclick="filterFounderMapRole('STORE', this)">Store (22)</button>
+                <button class="omni-filter-pill" onclick="filterFounderMapRole('ADMIN', this)">Admin (36)</button>
+                <button class="omni-filter-pill" onclick="filterFounderMapRole('MANAGER', this)">Manager (18)</button>
+                <button class="omni-filter-pill" onclick="filterFounderMapRole('STAFF', this)">Staff (240)</button>
+              </div>
+
+              <!-- Map Split Grid (Left Map Canvas + Right Live Users Panel) -->
+              <div class="omni-map-grid">
+                <!-- Map Viewport -->
+                <div class="omni-map-canvas-card" id="omni-map-viewport">
+                  <!-- Floating Live Map Legend (Top Left) -->
+                  <div class="omni-map-floating-legend">
+                    <div class="omni-legend-title">Live Map Legend</div>
+                    <div class="omni-legend-row"><span class="omni-legend-icon">👑</span> Founder (You)</div>
+                    <div class="omni-legend-row"><span class="omni-legend-icon">🛡️</span> Super Admin</div>
+                    <div class="omni-legend-row"><span class="omni-legend-icon" style="color:#60A5FA;">🔵</span> Admin</div>
+                    <div class="omni-legend-row"><span class="omni-legend-icon" style="color:#FB923C;">🟠</span> Manager</div>
+                    <div class="omni-legend-row"><span class="omni-legend-icon" style="color:#34D399;">🟢</span> Staff</div>
+                    <div class="omni-legend-row"><span class="omni-legend-icon">🏬</span> Store / Dark Store</div>
+                    <div class="omni-legend-row"><span class="omni-legend-icon" style="color:#C084FC;">🛵</span> Delivery Partner</div>
+                    <div class="omni-legend-row"><span class="omni-legend-icon" style="color:#38BDF8;">👤</span> Customer</div>
+                    <div class="omni-legend-row"><span style="display:inline-block; width:16px; height:3px; background:#10B981; border-radius:2px;"></span> Active Delivery Route</div>
+                  </div>
+
+                  <!-- Floating Tooltip Card for DP-1084 -->
+                  <div class="omni-map-rider-card" id="dp1084-floating-card">
+                    <div class="omni-rider-card-header">
+                      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="DP-1084" class="omni-rider-card-avatar">
+                      <div>
+                        <div class="omni-rider-name">DP-1084</div>
+                        <span class="omni-rider-status-pill">On Delivery</span>
+                      </div>
+                      <div class="omni-locate-btn" style="margin-left:auto;" onclick="inspectEntity('DELIVERY_PARTNER', 'DP-1084')">↗</div>
+                    </div>
+                    <div class="omni-rider-meta-row"><span>📦</span> Order: <strong>#OD78421</strong></div>
+                    <div class="omni-rider-meta-row"><span>⏳</span> ETA: <strong>8 min</strong></div>
+                    <div class="omni-rider-meta-row"><span>📍</span> Distance: <strong>2.4 km</strong></div>
+                  </div>
+
+                  <!-- High Fidelity Interactive SVG Map of Guwahati -->
+                  <svg id="guwahati-map-svg" width="100%" height="440" viewBox="0 0 960 440" preserveAspectRatio="none" style="display:block; background:#070B14; cursor:grab;">
+                    <defs>
+                      <pattern id="guwahati-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                        <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1" />
+                      </pattern>
+                      <linearGradient id="brahmaputra-grad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#1E293B" stop-opacity="0.95"/>
+                        <stop offset="50%" stop-color="#0F172A" stop-opacity="0.98"/>
+                        <stop offset="100%" stop-color="#1E293B" stop-opacity="0.9"/>
+                      </linearGradient>
+                      <radialGradient id="founder-radar" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+                        <stop offset="70%" stop-color="#6366F1" stop-opacity="0.08"/>
+                        <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+                      </radialGradient>
+                    </defs>
+
+                    <!-- Background Grid -->
+                    <rect width="960" height="440" fill="url(#guwahati-grid)" />
+
+                    <!-- Brahmaputra River -->
+                    <path d="M 460 0 Q 560 60 660 80 T 960 135 L 960 0 Z" fill="url(#brahmaputra-grad)" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5"/>
+                    <path d="M 470 12 Q 570 70 670 90 T 960 145" fill="none" stroke="rgba(56, 189, 248, 0.15)" stroke-width="1" stroke-dasharray="8 6"/>
+                    <text x="650" y="48" fill="#64748B" font-size="13" font-weight="800" letter-spacing="1" transform="rotate(7 650 48)">Brahmaputra River</text>
+
+                    <!-- Highway Arteries & City Roads -->
+                    <path d="M 120 220 Q 320 180 520 230 T 940 260" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5" />
+                    <path d="M 280 40 Q 350 200 480 390" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3" />
+                    <path d="M 680 40 Q 640 200 780 410" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3" />
+                    <path d="M 220 370 L 880 370" fill="none" stroke="rgba(245, 158, 11, 0.4)" stroke-width="3.5" />
+
+                    <!-- NH27 Highway Badge -->
+                    <rect x="290" y="360" width="46" height="18" rx="4" fill="#F59E0B" />
+                    <text x="313" y="373" fill="#000" font-size="10" font-weight="900" text-anchor="middle">NH27</text>
+
+                    <!-- Locality Labels -->
+                    <text x="390" y="48" fill="#94A3B8" font-size="11" font-weight="700">Paltan Bazar</text>
+                    <text x="490" y="96" fill="#94A3B8" font-size="11" font-weight="700">Fancy Bazar</text>
+                    <text x="580" y="132" fill="#94A3B8" font-size="11" font-weight="700">Uzan Bazar</text>
+                    <text x="450" y="290" fill="#94A3B8" font-size="11" font-weight="700">Beltola</text>
+                    <text x="640" y="270" fill="#94A3B8" font-size="11" font-weight="700">Dispur</text>
+                    <text x="490" y="338" fill="#94A3B8" font-size="11" font-weight="700">Hatigaon</text>
+                    <text x="465" y="388" fill="#94A3B8" font-size="11" font-weight="700">Bhangagarh</text>
+
+                    <!-- Scale Bar -->
+                    <line x1="20" y1="415" x2="80" y2="415" stroke="#94A3B8" stroke-width="2" />
+                    <text x="50" y="410" fill="#94A3B8" font-size="10" font-weight="800" text-anchor="middle">2 km</text>
+
+                    <!-- Concentric Circular Geofence Rings Centered on Founder -->
+                    <circle cx="490" cy="245" r="140" fill="url(#founder-radar)" stroke="rgba(99, 102, 241, 0.25)" stroke-width="1.5" stroke-dasharray="6 4"/>
+                    <circle cx="490" cy="245" r="90" fill="none" stroke="rgba(99, 102, 241, 0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+                    <circle cx="490" cy="245" r="45" fill="none" stroke="rgba(139, 92, 246, 0.6)" stroke-width="1.5"/>
+
+                    <!-- Active Delivery Route (Store #04 -> DP-1084 -> Customer Anita Das) -->
+                    <path d="M 345 155 Q 500 230 650 262 T 730 290" fill="none" stroke="#10B981" stroke-width="3.5" stroke-dasharray="8 5" filter="drop-shadow(0 0 8px #10B981)"/>
+
+                    <!-- Map Markers Group (with Interactive Tooltip & Click) -->
+                    <g id="map-pins-layer">
+                      <!-- 1. Founder Center Pin 👑 -->
+                      <g class="map-pin" transform="translate(490, 245)" onclick="inspectEntity('FOUNDER', 'founder-root')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="18" fill="#7C3AED" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 0 10px #8B5CF6)"/>
+                        <text x="0" y="5" font-size="14" text-anchor="middle">👑</text>
+                      </g>
+
+                      <!-- 2. Super Admin Pin 🛡️ (Fancy Bazar) -->
+                      <g class="map-pin pin-role-ADMIN" transform="translate(440, 192)" onclick="inspectEntity('SUPER_ADMIN', 'USR-002')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="13" fill="#EF4444" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="10" text-anchor="middle">🛡️</text>
+                      </g>
+
+                      <!-- 3. Admin A02 Pin 🔵 (Paltan Bazar) -->
+                      <g class="map-pin pin-role-ADMIN" transform="translate(483, 148)" onclick="inspectEntity('ADMIN', 'USR-003')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="11" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">🔵</text>
+                      </g>
+
+                      <!-- 4. Manager Pin 🟠 (Uzan Bazar) -->
+                      <g class="map-pin pin-role-MANAGER" transform="translate(555, 190)" onclick="inspectEntity('MANAGER', 'USR-004')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="11" fill="#F97316" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">👔</text>
+                      </g>
+
+                      <!-- 5. Manager S02 Pin 🟠 (Dispur) -->
+                      <g class="map-pin pin-role-MANAGER" transform="translate(625, 345)" onclick="inspectEntity('MANAGER', 'USR-005')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="11" fill="#F97316" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">👔</text>
+                      </g>
+
+                      <!-- 6. Staff Pin 🟢 (Hatigaon) -->
+                      <g class="map-pin pin-role-STAFF" transform="translate(345, 235)" onclick="inspectEntity('STAFF', 'USR-006')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="10" fill="#0D9488" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="3" font-size="8" text-anchor="middle">📦</text>
+                      </g>
+
+                      <!-- 7. Dark Store #04 Pin 🏬 (Beltola Hub) -->
+                      <g class="map-pin pin-role-STORE" transform="translate(345, 155)" onclick="inspectEntity('STORE', 'STR-004')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="14" fill="#10B981" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 0 8px #10B981)"/>
+                        <text x="0" y="4" font-size="10" text-anchor="middle">🏬</text>
+                      </g>
+
+                      <!-- 8. Dark Store #01 Pin 🏬 (Fancy Bazar Hub) -->
+                      <g class="map-pin pin-role-STORE" transform="translate(398, 235)" onclick="inspectEntity('STORE', 'STR-001')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="12" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">🏬</text>
+                      </g>
+
+                      <!-- 9. Dark Store #02 Pin 🏬 (Paltan Bazar Hub) -->
+                      <g class="map-pin pin-role-STORE" transform="translate(532, 320)" onclick="inspectEntity('STORE', 'STR-002')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="12" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">🏬</text>
+                      </g>
+
+                      <!-- 10. Dark Store #03 Pin 🏬 (Dispur Hub) -->
+                      <g class="map-pin pin-role-STORE" transform="translate(680, 280)" onclick="inspectEntity('STORE', 'STR-003')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="12" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">🏬</text>
+                      </g>
+
+                      <!-- 11. Delivery Partner DP-1084 🛵 (Active in transit) -->
+                      <g class="map-pin pin-role-DELIVERY" transform="translate(650, 262)" onclick="inspectEntity('DELIVERY_PARTNER', 'DP-1084')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="13" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 0 8px #8B5CF6)"/>
+                        <text x="0" y="4" font-size="10" text-anchor="middle">🛵</text>
+                      </g>
+
+                      <!-- 12. Delivery Partner DP-1085 🛵 -->
+                      <g class="map-pin pin-role-DELIVERY" transform="translate(565, 260)" onclick="inspectEntity('DELIVERY_PARTNER', 'DP-1085')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="11" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">🛵</text>
+                      </g>
+
+                      <!-- 13. Delivery Partner DP-1086 🛵 -->
+                      <g class="map-pin pin-role-DELIVERY" transform="translate(380, 335)" onclick="inspectEntity('DELIVERY_PARTNER', 'DP-1086')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="11" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">🛵</text>
+                      </g>
+
+                      <!-- 14. Customer Anita Das 👤 (Dispur) -->
+                      <g class="map-pin pin-role-CUSTOMER" transform="translate(730, 290)" onclick="inspectEntity('CUSTOMER', 'CUST-001')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="12" fill="#0284C7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 0 8px #0284C7)"/>
+                        <text x="0" y="4" font-size="9" text-anchor="middle">👤</text>
+                      </g>
+
+                      <!-- 15. Customer Rahul 👤 (Beltola) -->
+                      <g class="map-pin pin-role-CUSTOMER" transform="translate(425, 295)" onclick="inspectEntity('CUSTOMER', 'CUST-002')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="10" fill="#0284C7" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="3" font-size="8" text-anchor="middle">👤</text>
+                      </g>
+
+                      <!-- 16. Customer Sneha 👤 (Fancy Bazar) -->
+                      <g class="map-pin pin-role-CUSTOMER" transform="translate(483, 178)" onclick="inspectEntity('CUSTOMER', 'CUST-003')" style="cursor:pointer;">
+                        <circle cx="0" cy="0" r="10" fill="#0284C7" stroke="#FFFFFF" stroke-width="2"/>
+                        <text x="0" y="3" font-size="8" text-anchor="middle">👤</text>
+                      </g>
+                    </g>
+                  </svg>
+
+                  <!-- Floating Map Zoom Controls (Bottom Right) -->
+                  <div class="omni-map-zoom-controls">
+                    <button class="omni-zoom-btn" onclick="zoomGuwahatiMap(1.2)" title="Zoom In">+</button>
+                    <button class="omni-zoom-btn" onclick="zoomGuwahatiMap(0.8)" title="Zoom Out">−</button>
+                    <button class="omni-zoom-btn" onclick="resetGuwahatiMap()" title="Center on Guwahati Beltola Hub">🎯</button>
+                  </div>
+                </div>
+
+                <!-- Right-side Live Users (1,973 Online) List -->
+                <div class="omni-live-users-panel">
+                  <div class="omni-live-users-header">
+                    <span class="omni-nominal-pulse"></span>
+                    <span>Live Users (1,973 Online)</span>
+                  </div>
+
+                  <!-- User 1: Ravi Sharma (Delivery Partner) -->
+                  <div class="omni-live-user-item">
+                    <div class="omni-live-user-left">
+                      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80" alt="Ravi Sharma" class="omni-live-user-avatar">
+                      <div class="omni-live-user-info">
+                        <div style="display:flex; align-items:center; gap:6px;">
+                          <div class="omni-live-user-name">Ravi Sharma</div>
+                          <span class="role-tag-pill role-founder" style="font-size:0.6rem; padding:1px 5px; background:rgba(139,92,246,0.2); color:#C084FC;">Delivery Partner</span>
+                        </div>
+                        <div class="omni-live-user-sub"><span style="color:#10B981;">● Live</span> • 2.4 km</div>
+                      </div>
+                    </div>
+                    <button class="omni-locate-btn" onclick="locateUserOnMap('DP-1084', 650, 262)" title="Locate on Map">↗</button>
+                  </div>
+
+                  <!-- User 2: DarkStore #04 (Store) -->
+                  <div class="omni-live-user-item">
+                    <div class="omni-live-user-left">
+                      <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=100&auto=format&fit=crop&q=80" alt="DarkStore #04" class="omni-live-user-avatar">
+                      <div class="omni-live-user-info">
+                        <div style="display:flex; align-items:center; gap:6px;">
+                          <div class="omni-live-user-name">DarkStore #04</div>
+                          <span class="role-tag-pill role-manager" style="font-size:0.6rem; padding:1px 5px;">Store</span>
+                        </div>
+                        <div class="omni-live-user-sub"><span style="color:#10B981;">● Live</span> • Beltola</div>
+                      </div>
+                    </div>
+                    <button class="omni-locate-btn" onclick="locateUserOnMap('STR-004', 345, 155)" title="Locate on Map">↗</button>
+                  </div>
+
+                  <!-- User 3: Anita Das (Customer) -->
+                  <div class="omni-live-user-item">
+                    <div class="omni-live-user-left">
+                      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Anita Das" class="omni-live-user-avatar">
+                      <div class="omni-live-user-info">
+                        <div style="display:flex; align-items:center; gap:6px;">
+                          <div class="omni-live-user-name">Anita Das</div>
+                          <span class="role-tag-pill role-customer" style="font-size:0.6rem; padding:1px 5px;">Customer</span>
+                        </div>
+                        <div class="omni-live-user-sub"><span style="color:#10B981;">● Live</span> • Ordering</div>
+                      </div>
+                    </div>
+                    <button class="omni-locate-btn" onclick="locateUserOnMap('CUST-001', 730, 290)" title="Locate on Map">↗</button>
+                  </div>
+
+                  <!-- User 4: Store Manager - S01 (Manager) -->
+                  <div class="omni-live-user-item">
+                    <div class="omni-live-user-left">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" alt="Store Manager - S01" class="omni-live-user-avatar">
+                      <div class="omni-live-user-info">
+                        <div style="display:flex; align-items:center; gap:6px;">
+                          <div class="omni-live-user-name">Store Manager - S01</div>
+                          <span class="role-tag-pill role-store" style="font-size:0.6rem; padding:1px 5px; background:rgba(249,115,22,0.2); color:#FDBA74;">Manager</span>
+                        </div>
+                        <div class="omni-live-user-sub"><span style="color:#10B981;">● Live</span> • Dispur</div>
+                      </div>
+                    </div>
+                    <button class="omni-locate-btn" onclick="locateUserOnMap('USR-004', 555, 190)" title="Locate on Map">↗</button>
+                  </div>
+
+                  <!-- User 5: Admin - A02 (Admin) -->
+                  <div class="omni-live-user-item">
+                    <div class="omni-live-user-left">
+                      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Admin - A02" class="omni-live-user-avatar">
+                      <div class="omni-live-user-info">
+                        <div style="display:flex; align-items:center; gap:6px;">
+                          <div class="omni-live-user-name">Admin - A02</div>
+                          <span class="role-tag-pill role-admin" style="font-size:0.6rem; padding:1px 5px;">Admin</span>
+                        </div>
+                        <div class="omni-live-user-sub"><span style="color:#10B981;">● Live</span> • 1.2 km</div>
+                      </div>
+                    </div>
+                    <button class="omni-locate-btn" onclick="locateUserOnMap('USR-003', 483, 148)" title="Locate on Map">↗</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Three-Column Deck (Activity Feed, Quick Actions, System Status) -->
+            <div class="omni-bottom-deck">
+              <!-- Column 1: Live Activity Feed (Real-Time) -->
+              <div class="omni-deck-card">
+                <div class="omni-deck-card-header">
+                  <span>⚡</span>
+                  <span>Live Activity Feed (Real-Time)</span>
+                </div>
+                <div class="omni-activity-item">
+                  <div class="omni-activity-left">
+                    <span>🚴</span>
+                    <span>Order <strong>#OD78421</strong> assigned to <strong>DP-1084</strong></span>
+                  </div>
+                  <span class="omni-activity-time">11:41 AM</span>
+                </div>
+                <div class="omni-activity-item">
+                  <div class="omni-activity-left">
+                    <span>🏬</span>
+                    <span>Store <strong>#04</strong> packed Order <strong>#OD78421</strong></span>
+                  </div>
+                  <span class="omni-activity-time">11:39 AM</span>
+                </div>
+                <div class="omni-activity-item">
+                  <div class="omni-activity-left">
+                    <span>👤</span>
+                    <span>Customer <strong>Anita Das</strong> placed Order <strong>#OD78421</strong></span>
+                  </div>
+                  <span class="omni-activity-time">11:37 AM</span>
+                </div>
+                <div class="omni-activity-item">
+                  <div class="omni-activity-left">
+                    <span>🛵</span>
+                    <span>Delivery Partner <strong>DP-1084</strong> went online</span>
+                  </div>
+                  <span class="omni-activity-time">11:30 AM</span>
+                </div>
+                <div class="omni-activity-item">
+                  <div class="omni-activity-left">
+                    <span>💻</span>
+                    <span>Admin <strong>A02</strong> updated inventory (Store #04)</span>
+                  </div>
+                  <span class="omni-activity-time">11:28 AM</span>
+                </div>
+              </div>
+
+              <!-- Column 2: Master Action Center – Quick Actions (Founder) -->
+              <div class="omni-deck-card">
+                <div class="omni-deck-card-header">
+                  <span>⚡</span>
+                  <span>Master Action Center – Quick Actions (Founder)</span>
+                </div>
+                <div class="omni-quick-action-grid">
+                  <!-- 1. Activate -->
+                  <div class="omni-quick-tile tile-activate" onclick="invokeMasterActionTile('ACTIVATE_USER')">
+                    <span style="font-size:1.1rem;">🟢</span>
+                    <span>Activate</span>
+                  </div>
+                  <!-- 2. Deactivate -->
+                  <div class="omni-quick-tile tile-deactivate" onclick="invokeMasterActionTile('DEACTIVATE_USER')">
+                    <span style="font-size:1.1rem;">🔴</span>
+                    <span>Deactivate</span>
+                  </div>
+                  <!-- 3. Suspend -->
+                  <div class="omni-quick-tile tile-suspend" onclick="invokeMasterActionTile('SUSPEND_USER')">
+                    <span style="font-size:1.1rem;">⛔</span>
+                    <span>Suspend</span>
+                  </div>
+                  <!-- 4. Unsuspend -->
+                  <div class="omni-quick-tile tile-unsuspend" onclick="invokeMasterActionTile('UNSUSPEND_USER')">
+                    <span style="font-size:1.1rem;">🔓</span>
+                    <span>Unsuspend</span>
+                  </div>
+                  <!-- 5. Change Role -->
+                  <div class="omni-quick-tile tile-changerole" onclick="invokeMasterActionTile('CHANGE_ROLE')">
+                    <span style="font-size:1.1rem;">👤</span>
+                    <span>Change Role</span>
+                  </div>
+                  <!-- 6. Assign Store -->
+                  <div class="omni-quick-tile tile-assignstore" onclick="invokeMasterActionTile('ASSIGN_STORE')">
+                    <span style="font-size:1.1rem;">🏪</span>
+                    <span>Assign Store</span>
+                  </div>
+                  <!-- 7. Reset Password -->
+                  <div class="omni-quick-tile tile-resetpwd" onclick="invokeMasterActionTile('RESET_PASSWORD')">
+                    <span style="font-size:1.1rem;">🔑</span>
+                    <span>Reset Password</span>
+                  </div>
+                  <!-- 8. Force Logout -->
+                  <div class="omni-quick-tile tile-forcelogout" onclick="invokeMasterActionTile('FORCE_LOGOUT')">
+                    <span style="font-size:1.1rem;">🚪</span>
+                    <span>Force Logout</span>
+                  </div>
+                  <!-- 9. View Live Location -->
+                  <div class="omni-quick-tile tile-viewlocation" onclick="locateUserOnMap('DP-1084', 650, 262)">
+                    <span style="font-size:1.1rem;">📍</span>
+                    <span>View Live Location</span>
+                  </div>
+                  <!-- 10. Send Notification -->
+                  <div class="omni-quick-tile tile-sendnotif" onclick="invokeMasterActionTile('SEND_NOTIFICATION')">
+                    <span style="font-size:1.1rem;">🔔</span>
+                    <span>Send Notification</span>
+                  </div>
+                  <!-- 11. Refund -->
+                  <div class="omni-quick-tile tile-refund" onclick="invokeMasterActionTile('REFUND_ORDER')">
+                    <span style="font-size:1.1rem;">💸</span>
+                    <span>Refund</span>
+                  </div>
+                  <!-- 12. More Actions -->
+                  <div class="omni-quick-tile tile-moreactions" onclick="openMasterActionCenter()">
+                    <span style="font-size:1.1rem;">⚙️</span>
+                    <span>More Actions</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 3: System Status -->
+              <div class="omni-deck-card">
+                <div class="omni-deck-card-header">
+                  <span>🛡️</span>
+                  <span>System Status</span>
+                </div>
+                <div class="omni-status-item">
+                  <div class="omni-status-left">
+                    <span class="omni-nominal-pulse"></span>
+                    <span>Platform</span>
+                  </div>
+                  <span class="omni-status-pill">Operational</span>
+                </div>
+                <div class="omni-status-item">
+                  <div class="omni-status-left">
+                    <span class="omni-nominal-pulse"></span>
+                    <span>Live Tracking</span>
+                  </div>
+                  <span class="omni-status-pill">Operational</span>
+                </div>
+                <div class="omni-status-item">
+                  <div class="omni-status-left">
+                    <span class="omni-nominal-pulse"></span>
+                    <span>Orders System</span>
+                  </div>
+                  <span class="omni-status-pill">Operational</span>
+                </div>
+                <div class="omni-status-item">
+                  <div class="omni-status-left">
+                    <span class="omni-nominal-pulse"></span>
+                    <span>Payments</span>
+                  </div>
+                  <span class="omni-status-pill">Operational</span>
+                </div>
+                <div class="omni-status-item">
+                  <div class="omni-status-left">
+                    <span class="omni-nominal-pulse"></span>
+                    <span>Notifications</span>
+                  </div>
+                  <span class="omni-status-pill">Operational</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. SUBVIEW: MASTER ACTION CENTER (25 ACTIONS + GLOBAL SEARCH) -->
+          <div id="founder-sub-actions" class="omni-founder-subview" style="display: none;">
+            <!-- FOUNDER GLOBAL SEARCH -->
+            <div class="glass-card" style="border-color: rgba(99, 102, 241, 0.4); padding: 18px 22px; background: linear-gradient(135deg, rgba(14, 20, 34, 0.9) 0%, rgba(24, 33, 54, 0.85) 100%); margin-bottom: 20px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 1.1rem;">🔎</span>
+                  <span style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; color: #C7D2FE;">Founder Omni-Entity Global Search</span>
+                </div>
+                <span style="font-size: 0.72rem; color: var(--text-tertiary);">Live Index: Customer • User • Admin • Super Admin • Manager • Staff • Store • Product • Order • Delivery Partner • Payment • Transaction • Support Ticket</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; position: relative;">
+                <input type="text" id="founder-global-search-input" class="form-control" style="font-size: 0.95rem; padding: 12px 18px; border-radius: 100px; background: rgba(8, 12, 20, 0.9); border: 1px solid var(--border-medium); color: #fff;"
+                  placeholder="Search anything... (e.g. Sneha, Dark Store #04, Karan Singh, OMNI-8291, TXN-9841, Milk, Vikram, TCK-101)..."
+                  oninput="handleFounderGlobalSearch(this.value)">
+                <button class="btn-act" onclick="clearFounderGlobalSearch()" style="padding: 10px 18px;">Clear</button>
+              </div>
+              <!-- Live Search Results Dropdown -->
+              <div id="founder-search-results-panel" style="display: none; margin-top: 14px; max-height: 440px; overflow-y: auto; border-top: 1px solid var(--border-subtle); padding-top: 12px;"></div>
+            </div>
+
+            <!-- PERMANENT MASTER ACTION CENTER (25 ACTIONS) -->
+            <div class="glass-card" style="border-color: rgba(99, 102, 241, 0.45); padding: 22px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.3rem;">⚡</span>
+                    <h3 style="font-size: 1.2rem; font-weight: 900; color: #fff;">Permanent Master Action Center</h3>
+                    <span class="role-tag-pill role-founder">ROOT PLATFORM AUTHORITY</span>
+                  </div>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px;">
+                    Supreme administrative command deck controlling Store to Customer, Delivery Partner to Staff, Admin to Super Admin
+                  </p>
+                </div>
+                <div style="display: align-items: center; gap: 10px;">
+                  <input type="text" id="action-center-filter-input" class="form-control" placeholder="Quick filter 25 actions..." oninput="filterMasterActionCenter(this.value)" style="width: 220px; padding: 8px 14px; font-size: 0.8rem; border-radius: 100px;">
+                </div>
+              </div>
+
+              <!-- Category Filter Pills -->
+              <div class="action-cat-pills-bar">
+                <button class="action-cat-pill active" onclick="switchActionCategory('ALL', this)">All (25)</button>
+                <button class="action-cat-pill" onclick="switchActionCategory('USERS', this)">👥 Users & Roles (8)</button>
+                <button class="action-cat-pill" onclick="switchActionCategory('STORES', this)">🏬 Stores & Hubs (4)</button>
+                <button class="action-cat-pill" onclick="switchActionCategory('FLEET', this)">🛵 Delivery Fleet (3)</button>
+                <button class="action-cat-pill" onclick="switchActionCategory('ORDERS', this)">📦 Orders & Money (5)</button>
+                <button class="action-cat-pill" onclick="switchActionCategory('PLATFORM', this)">🔒 Platform & Security (5)</button>
+              </div>
+
+              <!-- 25 Searchable Master Action Tiles Grid -->
+              <div class="master-action-grid" id="inline-master-action-grid">
+                <!-- 1. Create -->
+                <div class="action-tile-btn" data-cat="USERS STORES FLEET" data-keywords="create user store rider add new account" onclick="invokeMasterActionTile('CREATE_ENTITY')">
+                  <div class="action-tile-icon">➕</div>
+                  <div class="action-tile-name">Create Entity</div>
+                  <div class="action-tile-desc">Provision User, Store, Rider, or Product</div>
+                </div>
+                <!-- 2. Edit -->
+                <div class="action-tile-btn" data-cat="USERS STORES FLEET" data-keywords="edit modify update change profile details" onclick="invokeMasterActionTile('EDIT_ENTITY')">
+                  <div class="action-tile-icon">✏️</div>
+                  <div class="action-tile-name">Edit Entity</div>
+                  <div class="action-tile-desc">Modify configurations & attributes</div>
+                </div>
+                <!-- 3. View -->
+                <div class="action-tile-btn" data-cat="USERS STORES FLEET ORDERS" data-keywords="view inspect 360 diagnostics logs details" onclick="invokeMasterActionTile('VIEW_ENTITY')">
+                  <div class="action-tile-icon">👁️</div>
+                  <div class="action-tile-name">View Entity</div>
+                  <div class="action-tile-desc">360° inspector & diagnostics panel</div>
+                </div>
+                <!-- 4. Approve -->
+                <div class="action-tile-btn" data-cat="FLEET ORDERS USERS" data-keywords="approve kyc refund escalation grant verify" onclick="invokeMasterActionTile('APPROVE_REQ')">
+                  <div class="action-tile-icon">✅</div>
+                  <div class="action-tile-name">Approve</div>
+                  <div class="action-tile-desc">Approve KYC, refunds, and escalations</div>
+                </div>
+                <!-- 5. Reject -->
+                <div class="action-tile-btn" data-cat="FLEET ORDERS USERS" data-keywords="reject deny decline claim fraud" onclick="invokeMasterActionTile('REJECT_REQ')">
+                  <div class="action-tile-icon">❌</div>
+                  <div class="action-tile-name">Reject</div>
+                  <div class="action-tile-desc">Reject unverified KYC or refund claims</div>
+                </div>
+                <!-- 6. Activate -->
+                <div class="action-tile-btn" data-cat="USERS STORES FLEET" data-keywords="activate enable resume online unpause" onclick="invokeMasterActionTile('ACTIVATE_USER')">
+                  <div class="action-tile-icon">🟢</div>
+                  <div class="action-tile-name">Activate</div>
+                  <div class="action-tile-desc">Enable suspended or inactive accounts</div>
+                </div>
+                <!-- 7. Deactivate -->
+                <div class="action-tile-btn" data-cat="USERS STORES FLEET" data-keywords="deactivate pause offline halt" onclick="invokeMasterActionTile('DEACTIVATE_USER')">
+                  <div class="action-tile-icon">🔴</div>
+                  <div class="action-tile-name">Deactivate</div>
+                  <div class="action-tile-desc">Temporarily pause account operations</div>
+                </div>
+                <!-- 8. Suspend -->
+                <div class="action-tile-btn" data-cat="USERS STORES FLEET" data-keywords="suspend penalize ban blacklist freeze" onclick="invokeMasterActionTile('SUSPEND_USER')">
+                  <div class="action-tile-icon">⛔</div>
+                  <div class="action-tile-name">Suspend</div>
+                  <div class="action-tile-desc">Disciplinary freeze with audit reasoning</div>
+                </div>
+                <!-- 9. Unsuspend -->
+                <div class="action-tile-btn" data-cat="USERS STORES FLEET" data-keywords="unsuspend unfreeze unban restore clearance" onclick="invokeMasterActionTile('UNSUSPEND_USER')">
+                  <div class="action-tile-icon">🔓</div>
+                  <div class="action-tile-name">Unsuspend</div>
+                  <div class="action-tile-desc">Clear penalties & reinstate privileges</div>
+                </div>
+                <!-- 10. Lock -->
+                <div class="action-tile-btn" data-cat="PLATFORM USERS" data-keywords="lock freeze credentials security 2fa" onclick="invokeMasterActionTile('LOCK_SECURITY')">
+                  <div class="action-tile-icon">🔒</div>
+                  <div class="action-tile-name">Lock</div>
+                  <div class="action-tile-desc">Lock credentials on fraud detection</div>
+                </div>
+                <!-- 11. Unlock -->
+                <div class="action-tile-btn" data-cat="PLATFORM USERS" data-keywords="unlock release credentials verify clearance" onclick="invokeMasterActionTile('UNLOCK_SECURITY')">
+                  <div class="action-tile-icon">🔓</div>
+                  <div class="action-tile-name">Unlock</div>
+                  <div class="action-tile-desc">Release security lock after verification</div>
+                </div>
+                <!-- 12. Delete -->
+                <div class="action-tile-btn" data-cat="USERS STORES PLATFORM" data-keywords="delete remove purge archive erase" onclick="invokeMasterActionTile('DELETE_RECORD')">
+                  <div class="action-tile-icon">🗑️</div>
+                  <div class="action-tile-name">Delete</div>
+                  <div class="action-tile-desc">Soft-delete record from live active pool</div>
+                </div>
+                <!-- 13. Restore -->
+                <div class="action-tile-btn" data-cat="USERS STORES PLATFORM" data-keywords="restore undelete recover recycle" onclick="invokeMasterActionTile('RESTORE_RECORD')">
+                  <div class="action-tile-icon">♻️</div>
+                  <div class="action-tile-name">Restore</div>
+                  <div class="action-tile-desc">Recover archived or purged entity</div>
+                </div>
+                <!-- 14. Reset Password -->
+                <div class="action-tile-btn" data-cat="USERS PLATFORM" data-keywords="reset password credential token issue" onclick="invokeMasterActionTile('RESET_PASSWORD')">
+                  <div class="action-tile-icon">🔑</div>
+                  <div class="action-tile-name">Reset Password</div>
+                  <div class="action-tile-desc">Issue temporary credentials & expire old</div>
+                </div>
+                <!-- 15. Force Logout -->
+                <div class="action-tile-btn" data-cat="USERS PLATFORM" data-keywords="force logout terminate revoke sessions jwt" onclick="invokeMasterActionTile('FORCE_LOGOUT')">
+                  <div class="action-tile-icon">🚪</div>
+                  <div class="action-tile-name">Force Logout</div>
+                  <div class="action-tile-desc">Revoke active sessions across all devices</div>
+                </div>
+                <!-- 16. Change Role -->
+                <div class="action-tile-btn" data-cat="USERS" data-keywords="change role promote demote elevate admin manager" onclick="invokeMasterActionTile('CHANGE_ROLE')">
+                  <div class="action-tile-icon">👤</div>
+                  <div class="action-tile-name">Change Role</div>
+                  <div class="action-tile-desc">Reassign role across 9 platform tiers</div>
+                </div>
+                <!-- 17. Change Permission -->
+                <div class="action-tile-btn" data-cat="USERS PLATFORM" data-keywords="change permission matrix rbac capabilities" onclick="invokeMasterActionTile('CHANGE_PERM')">
+                  <div class="action-tile-icon">🛡️</div>
+                  <div class="action-tile-name">Change Permission</div>
+                  <div class="action-tile-desc">Grant or revoke granular CRUD flags</div>
+                </div>
+                <!-- 18. Assign Store -->
+                <div class="action-tile-btn" data-cat="STORES USERS" data-keywords="assign store dark store hub manager staff picker" onclick="invokeMasterActionTile('ASSIGN_STORE')">
+                  <div class="action-tile-icon">🏪</div>
+                  <div class="action-tile-name">Assign Store</div>
+                  <div class="action-tile-desc">Bind Manager, Staff, or Hub inventory</div>
+                </div>
+                <!-- 19. Assign Delivery Partner -->
+                <div class="action-tile-btn" data-cat="FLEET ORDERS" data-keywords="assign delivery partner dispatch rider order manual" onclick="invokeMasterActionTile('ASSIGN_RIDER')">
+                  <div class="action-tile-icon">🚚</div>
+                  <div class="action-tile-name">Assign Delivery Partner</div>
+                  <div class="action-tile-desc">Manual dispatch override for order queue</div>
+                </div>
+                <!-- 20. Manage Order -->
+                <div class="action-tile-btn" data-cat="ORDERS" data-keywords="manage order status lifecycle tracking dispatch" onclick="invokeMasterActionTile('MANAGE_ORDER')">
+                  <div class="action-tile-icon">📦</div>
+                  <div class="action-tile-name">Manage Order</div>
+                  <div class="action-tile-desc">Fast-forward or alter 10-step lifecycle</div>
+                </div>
+                <!-- 21. Manage Payment -->
+                <div class="action-tile-btn" data-cat="ORDERS" data-keywords="manage payment upi gateway escrow payout settlement" onclick="invokeMasterActionTile('MANAGE_PAYMENT')">
+                  <div class="action-tile-icon">💰</div>
+                  <div class="action-tile-name">Manage Payment</div>
+                  <div class="action-tile-desc">Inspect ledger & release merchant escrow</div>
+                </div>
+                <!-- 22. Refund -->
+                <div class="action-tile-btn" data-cat="ORDERS" data-keywords="refund money cash return customer wallet credit" onclick="invokeMasterActionTile('REFUND_ORDER')">
+                  <div class="action-tile-icon">💸</div>
+                  <div class="action-tile-name">Refund</div>
+                  <div class="action-tile-desc">Credit customer OmniWallet or UPI</div>
+                </div>
+                <!-- 23. View Reports -->
+                <div class="action-tile-btn" data-cat="ORDERS PLATFORM" data-keywords="view reports analytics gmv csv export audit" onclick="invokeMasterActionTile('VIEW_REPORTS')">
+                  <div class="action-tile-icon">📊</div>
+                  <div class="action-tile-name">View Reports</div>
+                  <div class="action-tile-desc">Executive GMV, SLA & Financial ledgers</div>
+                </div>
+                <!-- 24. Send Notification -->
+                <div class="action-tile-btn" data-cat="PLATFORM USERS FLEET" data-keywords="send notification push alert broadcast sms" onclick="invokeMasterActionTile('SEND_NOTIFICATION')">
+                  <div class="action-tile-icon">🔔</div>
+                  <div class="action-tile-name">Send Notification</div>
+                  <div class="action-tile-desc">Broadcast instant push alert to users/fleet</div>
+                </div>
+                <!-- 25. Manage Settings -->
+                <div class="action-tile-btn" data-cat="PLATFORM" data-keywords="manage settings configuration platform maintenance mode" onclick="invokeMasterActionTile('MANAGE_SETTINGS')">
+                  <div class="action-tile-icon">⚙️</div>
+                  <div class="action-tile-name">Manage Settings</div>
+                  <div class="action-tile-desc">Platform rules, commissions & maintenance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. SUBVIEW: USERS & ROLES DIRECTORY -->
+          <div id="founder-sub-users" class="omni-founder-subview" style="display: none;">
+            <div class="glass-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <h3 style="font-size: 1.15rem; font-weight: 800;">Complete Platform Personnel & Accounts</h3>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px;">Direct governance: Activate, Deactivate, Suspend, Reset Permissions, Force Logout</p>
+                </div>
+                <div style="display:flex; gap:10px;">
+                  <button class="btn-act btn-act-success" onclick="openCreateEntityModal('USER')">+ Provision User</button>
+                  <input type="text" class="form-control" placeholder="Search user by name, email, role..." onkeyup="filterUsersTable(this.value)" style="width: 250px;">
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="data-table-lux">
+                  <thead>
+                    <tr>
+                      <th>User Identity</th>
+                      <th>Assigned Role</th>
+                      <th>Store Scope</th>
+                      <th>Account Status</th>
+                      <th>Last Login & IP</th>
+                      <th>Founder Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="founder-users-table-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. SUBVIEW: STORES & DARK STORES -->
+          <div id="founder-sub-stores" class="omni-founder-subview" style="display: none;">
+            <div class="glass-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <div>
+                  <h3 style="font-size: 1.15rem; font-weight: 800;">Guwahati Urban Dark Store Fulfillment Network</h3>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px;">4 Micro-Hubs Active • Real-Time Inventory & Manager Assignment</p>
+                </div>
+                <button class="btn-act btn-act-success" onclick="openCreateEntityModal('STORE')">+ Provision New Store Hub</button>
+              </div>
+              <div class="table-responsive">
+                <table class="data-table-lux">
+                  <thead>
+                    <tr>
+                      <th>Store ID</th>
+                      <th>Store Name</th>
+                      <th>Location / Zone</th>
+                      <th>Assigned Manager</th>
+                      <th>Active SKUs</th>
+                      <th>Daily Orders</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="founder-stores-table-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. SUBVIEW: FINANCE & REFUNDS -->
+          <div id="founder-sub-finance" class="omni-founder-subview" style="display: none;">
+            <div class="glass-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <div>
+                  <h3 style="font-size: 1.15rem; font-weight: 800;">Real-Time Financial Settlement & Platform Commission</h3>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px;">Gross Merchandise Value • 15% Platform Take-Rate • Escrow Settlements</p>
+                </div>
+                <button class="btn-act" onclick="showToast('Exporting financial ledger...')">📥 Export Ledger CSV</button>
+              </div>
+              <div class="table-responsive">
+                <table class="data-table-lux">
+                  <thead>
+                    <tr>
+                      <th>Transaction ID</th>
+                      <th>Order #</th>
+                      <th>Customer</th>
+                      <th>Amount</th>
+                      <th>Method</th>
+                      <th>Platform Take-Rate (15%)</th>
+                      <th>Status</th>
+                      <th>Refund</th>
+                    </tr>
+                  </thead>
+                  <tbody id="founder-finance-table-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. SUBVIEW: SECURITY & AUDIT LOGS -->
+          <div id="founder-sub-security" class="omni-founder-subview" style="display: none;">
+            <div class="glass-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <div>
+                  <h3 style="font-size: 1.15rem; font-weight: 800;">Enterprise Security Center & Cryptographic Audit Log</h3>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px;">Active token sessions, IP telemetry, device fingerprints</p>
+                </div>
+                <button class="btn-act btn-act-danger" onclick="forceLogoutAllSessions()">⚠️ Force Logout All Non-Founder Sessions</button>
+              </div>
+              <div class="table-responsive">
+                <table class="data-table-lux">
+                  <thead>
+                    <tr>
+                      <th>Timestamp</th>
+                      <th>Actor</th>
+                      <th>Role</th>
+                      <th>Action Executed</th>
+                      <th>Target Resource</th>
+                      <th>IP / Session ID</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="security-audit-table-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
